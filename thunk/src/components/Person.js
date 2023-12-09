@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getPerson } from '../actions';
 
 const Person = ({ person, isFetching, error }) => {
 
@@ -30,4 +31,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Person);
+export default connect(mapStateToProps, {getPerson})(Person);
